@@ -1,0 +1,240 @@
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: linear-gradient(135deg, #FF6B35 0%, #004E89 100%);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 450px;
+    border: 2px solid #004E89;
+}
+
+h1 {
+    color: #1a73e8;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    background: linear-gradient(45deg, #004E89, #FF6B35);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: #f0f2f5;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.tab-btn.active {
+    background: #1a73e8;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.input-group {
+    margin-bottom: 16px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #5f6368;
+}
+
+.password-input {
+    position: relative;
+    display: flex;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-size: 18px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+input:focus {
+    border-color: #1a73e8;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.2);
+}
+
+button {
+    width: 100%;
+    background: #004E89;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background: #FF6B35;
+    transform: translateY(-1px);
+}
+
+.generator-options {
+    margin-bottom: 20px;
+}
+
+.checkbox-group {
+    display: grid;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.generated-password {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    text-align: center;
+    font-family: monospace;
+    font-size: 18px;
+}
+
+#length {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.criteria {
+    display: grid;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.criterion {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    background: #f8f9fa;
+    transition: all 0.3s;
+}
+
+.criterion.met {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.criterion.unmet {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.password-strength-meter {
+    height: 6px;
+    background: #e0e0e0;
+    border-radius: 3px;
+    margin: 12px 0;
+    overflow: hidden;
+}
+
+.strength-bar {
+    height: 100%;
+    width: 0;
+    transition: all 0.3s;
+}
+
+.strength-weak { background: #ef5350; width: 33%; }
+.strength-moderate { background: #ffb74d; width: 66%; }
+.strength-strong { background: #66bb6a; width: 100%; }
+
+.result {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 16px;
+}
+
+.result.weak { color: #c62828; background: #ffebee; }
+.result.moderate { color: #ef6c00; background: #fff3e0; }
+.result.strong { color: #2e7d32; background: #e8f5e9; }
+
+.template-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.template-btn {
+    background: #f0f2f5;
+    color: #1a73e8;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.template-btn:hover {
+    background: #e8eaed;
+}
+
+.security-tips {
+    margin-top: 24px;
+    padding: 16px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.security-tips h3 {
+    color: #1a73e8;
+    margin-top: 0;
+}
+
+.security-tips ul {
+    margin: 0;
+    padding-left: 20px;
+    color: #5f6368;
+}
+
+.security-tips li {
+    margin: 8px 0;
+}

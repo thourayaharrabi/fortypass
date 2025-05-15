@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FortiPass - Advanced Password Manager</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>FortiPass</h1>
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab('password')">Password Check</button>
+            <button class="tab-btn" onclick="switchTab('generator')">Generate</button>
+        </div>
+        <div id="password-tab" class="tab-content active">
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email">
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <div class="password-input">
+                    <input type="password" id="password" placeholder="Enter your password">
+                    <button class="toggle-password" onclick="togglePassword()">👁️</button>
+                </div>
+            </div>
+            <button class="check-btn" onclick="checkPassword()">Check Strength</button>
+            <div id="result" class="result"></div>
+            <div id="criteria" class="criteria"></div>
+        </div>
+        <div id="generator-tab" class="tab-content">
+            <div class="generator-options">
+                <label>Length: <span id="length-value">12</span></label>
+                <input type="range" id="length" min="8" max="32" value="12">
+                <div class="checkbox-group">
+                    <label><input type="checkbox" id="uppercase" checked> Uppercase</label>
+                    <label><input type="checkbox" id="numbers" checked> Numbers</label>
+                    <label><input type="checkbox" id="symbols" checked> Symbols</label>
+                </div>
+            </div>
+            <div class="template-buttons">
+                <button onclick="applyTemplate('Basic')" class="template-btn">Basic</button>
+                <button onclick="applyTemplate('Strong')" class="template-btn">Strong</button>
+                <button onclick="applyTemplate('PIN')" class="template-btn">PIN</button>
+                <button onclick="applyTemplate('Passphrase')" class="template-btn">Passphrase</button>
+            </div>
+            <button onclick="generatePassword()" class="generate-btn">Generate Password</button>
+            <div id="generated-password" class="generated-password"></div>
+            <div class="security-tips">
+                <h3>Security Tips</h3>
+                <ul>
+                    <li>Use unique passwords for each account</li>
+                    <li>Enable two-factor authentication when possible</li>
+                    <li>Change passwords every 90 days</li>
+                    <li>Avoid using personal information</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="static/app.js"></script>
+</body>
+</html>
